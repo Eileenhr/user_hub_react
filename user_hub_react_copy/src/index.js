@@ -20,17 +20,13 @@ import {
   getTodosByUser
 } from './api';
 
-// NEW
 import {
   getCurrentUser
 } from './auth';
 
 const App = () => {
   const [userList, setUserList] = useState([]);
-
-  // MODIFIED
   const [currentUser, setCurrentUser] = useState(getCurrentUser());
-
   const [userPosts, setUserPosts] = useState([]);
   const [userTodos, setUserTodos] = useState([]);
 
@@ -40,7 +36,7 @@ const App = () => {
         setUserList(users)
       })
       .catch(error => {
-        // something something errors
+        console.error(error)
       });
   }, []);
 
@@ -56,7 +52,7 @@ const App = () => {
         setUserPosts(posts);
       })
       .catch(error => {
-        // something something errors
+        console.error(error)
       });
 
     getTodosByUser(currentUser.id)
@@ -64,7 +60,7 @@ const App = () => {
         setUserTodos(todos);
       })
       .catch(error => {
-        // something something errors
+        console.error(error)
       });
   }, [currentUser]);
 

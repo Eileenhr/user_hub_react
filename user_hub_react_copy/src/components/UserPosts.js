@@ -7,21 +7,6 @@ const UserPosts = ({
   userPosts
 }) => {
 
-    // useEffect(() => {
-    //     if (!currentUser) {
-    //       setUserPosts([]);
-    //       return;
-    //     }
-    
-    //     getPostsByUser(currentUser.id)
-    //       .then(posts => {
-    //         setUserPosts(posts);
-    //       })
-    //       .catch(error => {
-    //         console.error(error)
-    //       });
-    //   }, [currentUser]);
-
   return (
     <div className="user-posts"> 
       <h2>Posts By { currentUser.username }</h2>

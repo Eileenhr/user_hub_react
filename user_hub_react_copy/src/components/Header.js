@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-// NEW
 import {
   storeCurrentUser,
   clearCurrentUser
@@ -31,13 +30,13 @@ const Header = ({
   }
 
   const handleUserLogin = (event) => {
-    storeCurrentUser(selectedUser); // NEW
+    storeCurrentUser(selectedUser);
     setCurrentUser(selectedUser);
   }
 
   const handleUserLogout = (event) => {
     setSelectedUser(userList[0]);
-    clearCurrentUser(); // NEW
+    clearCurrentUser();
     setCurrentUser(null);
   }
 
